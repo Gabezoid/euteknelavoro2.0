@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eutekne Lavoro - Grazie</title>
+    <!-- Tailwind CSS included via module in main.ts importing index.css -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div id="root">
+        <div class="flex flex-col bg-[var(--color-bg-light)] min-h-screen">
+            
+            <!-- HEADER -->
+            <header class="fixed top-0 left-0 right-0 z-50 bg-[#3A9BBA]/85 backdrop-blur-lg shadow-lg border-b border-white/20">
+                <div class="container-boxed w-full">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex items-center">
+                    <a href="/" aria-label="Home page">
+                        <img src="/assets/EutLav-logo.svg" alt="Eutekne Lavoro" class="w-[200px] md:w-[280px] h-auto" />
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+            <main class="flex-grow flex items-center justify-center pt-20 relative overflow-hidden bg-[var(--color-brand-primary)] stagger-container">
+                <!-- Decorative element -->
+                <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
+                     <div class="bg-control-center absolute inset-0"></div>
+                </div>
+
+                <div class="container-boxed relative z-10 py-16">
+                    <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.1)] overflow-hidden border border-white/20">
+                        <div class="p-10 md:p-16 text-center flex flex-col items-center">
+                            
+                            <!-- Success Icon -->
+                            <div class="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mb-10 border border-white/30 shadow-sm relative reveal active">
+                                <div class="absolute inset-0 bg-white opacity-20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                                <i data-lucide="check-circle" class="w-12 h-12 text-white relative z-10"></i>
+                            </div>
+
+                            <h1 class="text-3xl md:text-5xl tracking-tight mb-8 reveal active !text-white" style="color: white; transition-delay: 150ms;">
+                                Grazie per averci contattato!
+                            </h1>
+                            
+                            <p class="text-xl md:text-2xl font-medium leading-relaxed mb-12 reveal active text-white/90" style="transition-delay: 300ms;">
+                                La tua richiesta è stata inviata con successo. Un nostro incaricato ti contatterà al più presto per scoprire insieme come <span class="font-bold text-white">Eutekne Lavoro</span> può trasformare il tuo lavoro quotidiano.
+                            </p>
+
+                            <a href="/" class="btn-primary !bg-[var(--color-brand-secondary)] hover:!bg-[#042A46] !text-white text-[17px] px-12 py-4 border-none inline-flex rounded-full shadow-lg hover:shadow-xl font-bold tracking-widest uppercase items-center justify-center transform active:scale-95 transition-all reveal active group" style="transition-delay: 450ms;">
+                                <i data-lucide="arrow-left" class="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform"></i>
+                                Torna alla Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="bg-[#011423] py-10 border-t border-[#041D30]" style="color: #E2E8F0">
+                <div class="container-boxed flex flex-col items-center text-center text-sm font-medium gap-6">
+                    <a href="/" aria-label="Eutekne Lavoro Home" class="inline-block">
+                        <img src="/assets/EutLav-logo.svg" alt="Eutekne Lavoro" class="h-8 opacity-60 brightness-0 invert mb-2" />
+                    </a>
+                    <div class="flex flex-col gap-2 opacity-70 items-center leading-relaxed">
+                        <div>
+                            2026 &copy; EUTEKNE SpA | <a href="#" class="hover:text-white transition-colors">Privacy</a> | <a href="#" class="hover:text-white transition-colors">Cookie</a>
+                        </div>
+                        <div>
+                            Via San Pio V, 27 - 10125 TORINO - Tel. 011.562.89.70 - Fax 011.562.76.04 - <a href="mailto:info@eutekne.it" class="hover:text-white transition-colors">info@eutekne.it</a>
+                        </div>
+                        <div>
+                            Capitale Sociale &euro; 540.000,00 i.v. C.F. P.IVA Iscrizione Registro Imprese di Torino 05546030015
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+  </body>
+</html>

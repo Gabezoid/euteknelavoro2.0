@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Ignora file multimediali per non corromperli su GitHub
+# Le estensioni sono state commentate per permettere il push necessario a Vercel
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.webm
+# *.mp4

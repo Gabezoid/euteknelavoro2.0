@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eutekne Lavoro</title>
+    <!-- Tailwind CSS included via module in main.ts importing index.css -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div id="root">
+        <div className="flex flex-col bg-[var(--color-bg-light)]">
+            
+            <!-- ANNOUNCEMENT BANNER -->
+            <a href="#festival-del-lavoro" class="fixed top-0 left-0 right-0 z-[60] h-10 bg-[var(--color-brand-secondary)] text-[var(--color-brand-accent)] flex items-center overflow-hidden hover:bg-[#042A46] transition-colors cursor-pointer" aria-label="Informazioni Festival del Lavoro 2026">
+                <div class="animate-[marquee_25s_linear_infinite] inline-block whitespace-nowrap text-sm font-bold uppercase tracking-widest flex items-center" style="animation: marquee 25s linear infinite;">
+                    <style>@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }</style>
+                    <span class="px-8">Vi aspettiamo al Festival del Lavoro 2026 a Roma dal 21 al 23 maggio presso lo stand 7</span>
+                    <span class="px-8 text-white">•</span>
+                    <span class="px-8">Scopri di più in fondo alla pagina</span>
+                    <span class="px-8 text-white">•</span>
+                    <span class="px-8">Vi aspettiamo al Festival del Lavoro 2026 a Roma dal 21 al 23 maggio presso lo stand 7</span>
+                    <span class="px-8 text-white">•</span>
+                    <span class="px-8">Scopri di più in fondo alla pagina</span>
+                </div>
+            </a>
+
+            <!-- SECTION 1: FIXED HEADER -->
+            <header class="fixed top-10 left-0 right-0 z-50 bg-[#3A9BBA]/85 backdrop-blur-lg shadow-lg transition-all duration-300">
+                <div class="container-boxed w-full">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex items-center">
+                    <a href="#" aria-label="Home page">
+                        <img src="/assets/EutLav-logo.svg" alt="Eutekne Lavoro" class="w-[200px] md:w-[280px] h-auto" />
+                    </a>
+                    </div>
+                    <div class="flex items-center">
+                    <a href="#contact-form" class="btn-primary !bg-[var(--color-brand-secondary)] !text-white hover:!bg-[var(--color-brand-accent)] border-none md:!py-2.5 md:!px-6 w-10 h-10 md:w-auto md:h-auto !p-0 text-sm flex items-center justify-center rounded-md">
+                        <i data-lucide="mail" class="w-5 h-5 md:hidden"></i>
+                        <span class="hidden md:inline">Contattaci senza impegno</span>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+            <main class="flex-grow">
+                <!-- SECTION 2: HERO BANNER -->
+                <section class="relative overflow-hidden bg-[var(--color-brand-primary)] h-screen min-h-[600px]">
+                <!-- VISUAL LAYER -->
+                <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                    <!-- BACKGROUND SVG -->
+                    <div class="eutekne-svg-container"></div>
+                    
+                    <!-- Woman Positioned -->
+                    <div class="absolute bottom-0 h-[75%] md:h-[85%] left-1/2 -translate-x-1/2 z-10 pointer-events-none flex flex-col items-center justify-end">
+                    <video autoPlay muted playsInline class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl">
+                        <source src="/assets/woman.webm" type="video/webm" />
+                        <img src="/assets/woman.png" alt="Consulente Eutekne" class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl" />
+                    </video>
+                    </div>
+                </div>
+
+                <!-- GRADIENT OVERLAY -->
+                <div class="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-[var(--color-brand-secondary)] to-transparent z-10 pointer-events-none"></div>
+
+                <!-- CONTENT LAYER -->
+                <div class="absolute bottom-0 left-0 right-0 w-full z-20 pb-6 md:pb-16 pt-32">
+                    <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 gap-y-6 md:gap-y-12 lg:gap-x-8 items-start md:items-end stagger-container">
+                        <!-- Left Side -->
+                        <div class="col-span-1 lg:col-span-6 reveal" style="width: 600px; max-width: 100%;">
+                            <h1 class="text-[34px] tracking-tight md:text-5xl lg:text-[64px] xl:text-[72px] text-white leading-tight !mb-0" style="color: white">
+                                Il <span class="italic">punto fermo</span> nella consulenza del lavoro
+                            </h1>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="col-span-1 lg:col-start-7 lg:col-span-6 hidden md:flex flex-col items-start md:items-end text-left md:text-right reveal">
+                            <span class="block text-white/90 text-[17px] md:text-lg mb-8 font-medium leading-relaxed max-w-[465px]">
+                                Soluzioni integrate per l'amministrazione del personale e la consulenza del lavoro. Informazione, professione, formazione e supporto in un solo ambiente per lavorare con più ordine e in totale sicurezza.<br />E con il supporto di <a href="#eutekne-ai" class="text-[var(--color-brand-accent)] hover:underline font-bold">Eutekne AI</a>
+                            </span>
+                            <a href="#contact-form" class="btn-primary !bg-[var(--color-brand-accent)] hover:!bg-[var(--color-brand-accent-hover)] !text-[var(--color-brand-secondary)] text-lg px-8 py-4 border-none inline-flex">
+                                Scopri come migliorare il tuo lavoro
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- STICKY SUB-NAVIGATION -->
+                <div id="sticky-subnav" class="sticky top-[120px] z-40 overflow-hidden" style="background-color: rgba(255, 255, 255, 0); box-shadow: none; backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); transition: all 0.2s;">
+                    <div class="container-boxed flex items-center justify-between">
+                        <div class="flex justify-between w-full" style="padding-top: 16px; padding-bottom: 16px;">
+                            <div class="flex items-center space-x-1 md:space-x-2 overflow-x-auto whitespace-nowrap hide-scrollbar flex-1 relative w-full justify-center md:justify-start">
+                                <a href="#informazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                    <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
+                                    <span class="relative z-10 flex items-center gap-1.5">Informazione</span>
+                                </a>
+                                <a href="#professione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                    <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
+                                    <span class="relative z-10 flex items-center gap-1.5">Professione</span>
+                                </a>
+                                <a href="#formazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                    <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
+                                    <span class="relative z-10 flex items-center gap-1.5">Formazione</span>
+                                </a>
+                                <a href="#supporto" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                    <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
+                                    <span class="relative z-10 flex items-center gap-1.5">Supporto</span>
+                                </a>
+                                <a href="#eutekne-ai" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                    <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
+                                    <span class="relative z-10 flex items-center gap-1.5">
+                                        <img src="/assets/eai_glifo.svg" alt="" class="w-5 h-5 object-contain" />
+                                        Eutekne AI
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: PAIN POINT -->
+                <section class="py-16 lg:py-24 bg-bg-light">
+                <div class="container-boxed">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 stagger-container">
+                    <div class="col-span-1 lg:col-start-1 lg:col-span-12 text-center flex flex-col items-center">
+                        <h2 class="text-brand-secondary tracking-tight mb-4 w-full max-w-[1100px] mx-auto reveal">
+                        La tua professione, senza la frammentazione delle fonti.
+                        </h2>
+                        <p class="text-xl md:text-2xl text-text-secondary mb-16 font-medium max-w-[920px] mx-auto reveal">
+                        Sai bene quanto tempo richiede la ricerca di risposte certe. Eutekne Lavoro trasforma il sapere specialistico in uno strumento operativo quotidiano. Non un semplice archivio, ma la tua infrastruttura di supporto.
+                        </p>
+                        <a href="#informazione" class="reveal inline-flex flex-col items-center text-text-secondary hover:text-[var(--color-brand-primary)] transition-colors group">
+                            <span class="font-bold uppercase tracking-wider text-sm mb-3">Scopri come funziona l'ecosistema</span>
+                            <div class="h-10 w-10 rounded-full border-2 border-border flex items-center justify-center group-hover:border-[var(--color-brand-primary)] transition-colors">
+                                <i data-lucide="arrow-down" class="h-5 w-5 group-hover:translate-y-1 transition-transform"></i>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- THE PILLAR -->
+                <section id="informazione" class="py-16 lg:py-24 bg-bg-light scroll-mt-[176px] border-b border-border last:border-0 overflow-hidden">
+                    <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 mb-12 stagger-container">
+                        <div class="col-span-1 lg:col-span-12">
+                        <span class="reveal inline-block text-[var(--color-brand-primary)] font-bold uppercase tracking-wider text-sm mb-3">
+                            Informazione
+                        </span>
+                        <h2 class="reveal text-3xl md:text-4xl lg:text-5xl text-brand-secondary tracking-tight mb-6 leading-tight">
+                            L'informazione affidabile e tempestiva.
+                        </h2>
+                        <p class="reveal text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                            In un contesto normativo in continua evoluzione, ti forniamo le prime informazioni per iniziare la giornata con il piede giusto.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full relative stagger-container">
+                        <div id="scroll-informazione" class="flex overflow-x-auto snap-x gap-6 pb-8 hide-scrollbar carousel-scroll-padding">
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+    
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="newspaper" 
+                                data-title="Eutekne.info" 
+                                data-text="Ogni giorno, dalle 6 del mattino, articoli che analizzano i temi di maggior rilievo pratico con indicazioni operative per una corretta applicazione delle novità.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="newspaper" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Eutekne.info
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Ogni giorno, dalle 6 del mattino, articoli che analizzano i temi di maggior rilievo pratico con indicazioni operative per una corretta applicazione delle novità.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden bg-gradient-to-t from-gray-50 to-transparent">
+                                    
+                    <div class="w-[85%] h-[85%] bg-white rounded-t-[12px] shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-border border-b-0 relative overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 right-0 h-4 bg-gray-100 border-b border-border flex items-center px-2 space-x-1 z-10">
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                        </div>
+                        <div class="w-full h-full pt-4 relative bg-gray-50">
+                            <img src="/assets/cards/eutekneinfo_screen.png" alt="Eutekne.info" class="w-full h-full object-cover object-top" />
+                        </div>
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="megaphone" 
+                                data-title="Circolare per la clientela" 
+                                data-text="Il modo più efficace e veloce per tenere informati i tuoi clienti su opportunità e agevolazioni, con un linguaggio semplice e su misura.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="megaphone" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Circolare per la clientela
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Il modo più efficace e veloce per tenere informati i tuoi clienti su opportunità e agevolazioni, con un linguaggio semplice e su misura.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/circolari-per-la-cilentela-sile_card.png" alt="Circolare per la clientela" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="mic" 
+                                data-title="La Voce di Eutekne" 
+                                data-text="Il podcast che ti accompagna ogni mattino verso l’inizio della tua giornata lavorativa informandoti sulle novità del giorno.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="mic" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        La Voce di Eutekne
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Il podcast che ti accompagna ogni mattino verso l’inizio della tua giornata lavorativa informandoti sulle novità del giorno.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/lavoce_card.png" alt="La Voce di Eutekne" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Slider Navigation -->
+                        <div class="container-boxed">
+                            <div class="reveal flex justify-end space-x-4 mt-2">
+                            <button data-scroll-target="scroll-informazione" data-scroll-amount="-400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Previous card">
+                                <i data-lucide="chevron-right" class="h-5 w-5 rotate-180"></i>
+                            </button>
+                            <button data-scroll-target="scroll-informazione" data-scroll-amount="400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Next card">
+                                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- THE PILLAR -->
+                <section id="professione" class="py-16 lg:py-24 bg-bg-muted scroll-mt-[176px] border-b border-border last:border-0 overflow-hidden">
+                    <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 mb-12 stagger-container">
+                        <div class="col-span-1 lg:col-span-12">
+                        <span class="reveal inline-block text-[var(--color-brand-primary)] font-bold uppercase tracking-wider text-sm mb-3">
+                            Professione
+                        </span>
+                        <h2 class="reveal text-3xl md:text-4xl lg:text-5xl text-brand-secondary tracking-tight mb-6 leading-tight">
+                            L'operatività al centro del tuo studio.
+                        </h2>
+                        <p class="reveal text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                            Le soluzioni integrate per l'amministrazione del personale, per analizzare ogni caso pratico e trovare la risposta migliore.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full relative stagger-container">
+                        <div id="scroll-professione" class="flex overflow-x-auto snap-x gap-6 pb-8 hide-scrollbar carousel-scroll-padding">
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+    
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="database" 
+                                data-title="Sistema Integrato Lavoro" 
+                                data-text="In un unico strumento on line trovi la prima informazione, l'approfondimento e l'operatività. Tutto quello di cui hai bisogno, quando ne hai bisogno.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="database" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Sistema Integrato Lavoro
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        In un unico strumento on line trovi la prima informazione, l'approfondimento e l'operatività. Tutto quello di cui hai bisogno, quando ne hai bisogno.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/sil_card.png" alt="Sistema Integrato Lavoro" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="wrench" 
+                                data-title="OmniKit" 
+                                data-text="La tua cassetta degli attrezzi. Una serie di tool pensati per determinare il Costo del lavoro, Confrontare i CCNL, calcolare la RAL e generare sintesi.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="wrench" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        OmniKit
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        La tua cassetta degli attrezzi. Una serie di tool pensati per determinare il Costo del lavoro, Confrontare i CCNL, calcolare la RAL e generare sintesi.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/omnikit_card.jpg" alt="OmniKit" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="book-open" 
+                                data-title="Guide Eutekne" 
+                                data-text="Il manuale operativo con un approccio trasversale a ogni argomento e abbondanza di schemi riepilogativi ed esempi di calcolo.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="book-open" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Guide Eutekne
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Il manuale operativo con un approccio trasversale a ogni argomento e abbondanza di schemi riepilogativi ed esempi di calcolo.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/guide_card.jpg" alt="Guide Eutekne" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="scale" 
+                                data-title="Werte" 
+                                data-text="Il software dedicato alla gestione semplice e sicura delle vertenze di lavoro, per supportarti anche nei casi più complessi.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="scale" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Werte
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Il software dedicato alla gestione semplice e sicura delle vertenze di lavoro, per supportarti anche nei casi più complessi.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/werte_card.png" alt="Werte" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="calendar-days" 
+                                data-title="Scadenzario" 
+                                data-text="Tutte le scadenze fiscali, previdenziali e lavoristiche sempre sotto controllo in un unico cruscotto integrato per il tuo studio.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="calendar-days" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Scadenzario
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Tutte le scadenze fiscali, previdenziali e lavoristiche sempre sotto controllo in un unico cruscotto integrato per il tuo studio.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/scadenzario_card.jpg" alt="Scadenzario" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Slider Navigation -->
+                        <div class="container-boxed">
+                            <div class="reveal flex justify-end space-x-4 mt-2">
+                            <button data-scroll-target="scroll-professione" data-scroll-amount="-400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Previous card">
+                                <i data-lucide="chevron-right" class="h-5 w-5 rotate-180"></i>
+                            </button>
+                            <button data-scroll-target="scroll-professione" data-scroll-amount="400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Next card">
+                                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- THE PILLAR -->
+                <section id="formazione" class="py-16 lg:py-24 bg-bg-light scroll-mt-[176px] border-b border-border last:border-0 overflow-hidden">
+                    <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 mb-12 stagger-container">
+                        <div class="col-span-1 lg:col-span-12">
+                        <span class="reveal inline-block text-[var(--color-brand-primary)] font-bold uppercase tracking-wider text-sm mb-3">
+                            Formazione
+                        </span>
+                        <h2 class="reveal text-3xl md:text-4xl lg:text-5xl text-brand-secondary tracking-tight mb-6 leading-tight">
+                            Aggiornamento continuo per te e il tuo team.
+                        </h2>
+                        <p class="reveal text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                            La conoscenza che fa scuola, pensata e realizzata per te e il tuo studio.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full relative stagger-container">
+                        <div id="scroll-formazione" class="flex overflow-x-auto snap-x gap-6 pb-8 hide-scrollbar carousel-scroll-padding">
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+    
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="graduation-cap" 
+                                data-title="Master Lavoro" 
+                                data-text="Il prodotto di punta dell’area formazione di Eutekne, che nelle sue diverse edizioni ha formato ormai oltre 3.000 professionisti.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="graduation-cap" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Master Lavoro
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Il prodotto di punta dell’area formazione di Eutekne, che nelle sue diverse edizioni ha formato ormai oltre 3.000 professionisti.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/masterlavoro_card.jpg" alt="Master Lavoro" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="users" 
+                                data-title="Per collaboratori e dipendenti" 
+                                data-text="Ampio catalogo dedicato allo studio. Dai corsi base per la prima volta alla materia, a quelli avanzati per acquisire competenze specifiche.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="users" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Per collaboratori e dipendenti
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Ampio catalogo dedicato allo studio. Dai corsi base per la prima volta alla materia, a quelli avanzati per acquisire competenze specifiche.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/collaboratoridipendenti_card.jpg" alt="Per collaboratori e dipendenti" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="target" 
+                                data-title="Formazione su misura" 
+                                data-text="Orientata a soddisfare le esigenze specifiche e a perseguire gli obiettivi formativi di Ordini, studi e realtà imprenditoriali.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="target" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Formazione su misura
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Orientata a soddisfare le esigenze specifiche e a perseguire gli obiettivi formativi di Ordini, studi e realtà imprenditoriali.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/formazionesumisura_card.jpg" alt="Formazione su misura" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Slider Navigation -->
+                        <div class="container-boxed">
+                            <div class="reveal flex justify-end space-x-4 mt-2">
+                            <button data-scroll-target="scroll-formazione" data-scroll-amount="-400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Previous card">
+                                <i data-lucide="chevron-right" class="h-5 w-5 rotate-180"></i>
+                            </button>
+                            <button data-scroll-target="scroll-formazione" data-scroll-amount="400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Next card">
+                                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- THE PILLAR -->
+                <section id="supporto" class="py-16 lg:py-24 bg-bg-light scroll-mt-[176px] border-b border-border last:border-0 overflow-hidden">
+                    <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 mb-12 stagger-container">
+                        <div class="col-span-1 lg:col-span-12">
+                        <span class="reveal inline-block text-[var(--color-brand-primary)] font-bold uppercase tracking-wider text-sm mb-3">
+                            Supporto
+                        </span>
+                        <h2 class="reveal text-3xl md:text-4xl lg:text-5xl text-brand-secondary tracking-tight mb-6 leading-tight">
+                            Il supporto per affrontare ogni aspetto della consulenza.
+                        </h2>
+                        <p class="reveal text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
+                            Affidandoti a Eutekne scegli di farti affiancare da un team di esperti qualificati, aumentando l'efficacia del tuo operato.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full relative stagger-container">
+                        <div id="scroll-supporto" class="flex overflow-x-auto snap-x gap-6 pb-8 hide-scrollbar carousel-scroll-padding">
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+    
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="shield-check" 
+                                data-title="Centro Studi" 
+                                data-text="L’autorevolezza e la sicurezza che derivano da un team di professionisti esperti, capaci di parlare il tuo stesso linguaggio.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="shield-check" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Centro Studi
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        L’autorevolezza e la sicurezza che derivano da un team di professionisti esperti, capaci di parlare il tuo stesso linguaggio.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden ">
+                                    
+                    <div class="w-full h-full overflow-hidden">
+                        <img src="/assets/cards/centrostudi_card.jpg" alt="Centro Studi" class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="reveal card-trigger bg-white rounded-[28px] shadow-sm snap-start p-8 md:p-10 min-w-[320px] w-[320px] md:min-w-[400px] md:w-[400px] hover:shadow-xl transition-all duration-300 flex-shrink-0 flex flex-col justify-between group cursor-pointer relative overflow-hidden" 
+                                style="min-height: 570px;" 
+                                data-icon="life-buoy" 
+                                data-title="Eutekne Care" 
+                                data-text="Un servizio di assistenza in tempo reale sempre a tua disposizione per darti tutto il supporto nelle ricerche e nell’utilizzo ottimale delle soluzioni.">
+                                <div class="z-10 relative">
+                                    <div class="mb-6 opacity-80">
+                                        <i data-lucide="life-buoy" class="h-8 w-8 mb-4 text-[var(--color-brand-primary)]"></i>
+                                    </div>
+                                    <h3 class="text-[#1d1d1f] tracking-tight mb-4 text-[26px] md:text-[32px] font-bold leading-tight">
+                                        Eutekne Care
+                                    </h3>
+                                    <p class="text-[#86868b] font-medium leading-relaxed text-[17px]">
+                                        Un servizio di assistenza in tempo reale sempre a tua disposizione per darti tutto il supporto nelle ricerche e nell’utilizzo ottimale delle soluzioni.
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[40%] md:h-[55%] flex items-end justify-center pointer-events-none rounded-b-[28px] overflow-hidden bg-gradient-to-t from-gray-50 to-transparent">
+                                    
+                    <div class="w-[85%] h-[85%] bg-white rounded-t-[12px] shadow-[0_0_20px_rgba(0,0,0,0.05)] border border-border border-b-0 relative overflow-hidden transition-transform duration-500 group-hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 right-0 h-4 bg-gray-100 border-b border-border flex items-center px-2 space-x-1 z-10">
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                            <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                        </div>
+                        <div class="w-full h-full pt-4 relative bg-gray-50">
+                            <img src="/assets/cards/euteknecare_screen.png" alt="Eutekne Care" class="w-full h-full object-cover object-top" />
+                        </div>
+                    </div>
+                
+                                </div>
+                                <div class="flex justify-end mt-8 z-10 relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-md">
+                                        <i data-lucide="plus" class="h-5 w-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-spacer" aria-hidden="true"></div>
+                        </div>
+
+                        <!-- Slider Navigation -->
+                        <div class="container-boxed">
+                            <div class="reveal flex justify-end space-x-4 mt-2">
+                            <button data-scroll-target="scroll-supporto" data-scroll-amount="-400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Previous card">
+                                <i data-lucide="chevron-right" class="h-5 w-5 rotate-180"></i>
+                            </button>
+                            <button data-scroll-target="scroll-supporto" data-scroll-amount="400" class="w-10 h-10 rounded-full bg-gray-200 text-[#1d1d1f] flex items-center justify-center hover:bg-gray-300 transition-colors" aria-label="Next card">
+                                <i data-lucide="chevron-right" class="h-5 w-5"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- SECTION 4: EUTEKNE AI -->
+                <section id="eutekne-ai" class="py-16 lg:py-24 bg-[#021C30] text-white relative scroll-mt-[176px] overflow-hidden">
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none mix-blend-screen z-0 opacity-50 md:opacity-80 flex justify-end">
+                    <img src="/assets/Cervello.png" alt="" class="w-auto h-auto max-w-[85%] md:max-w-[55%] max-h-[75vh] object-contain transform scale-[1.75] translate-x-[100px] origin-right" />
+                </div>
+
+                <div class="container-boxed relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 mb-16 stagger-container">
+                        <div class="col-span-1 lg:col-span-8">
+                            <div class="reveal flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 mb-8">
+                            <img src="/assets/EutekneAI-1.png" alt="Eutekne AI" class="h-12 object-contain" />
+                            <span class="inline-flex items-center px-4 py-1.5 rounded-[6px] text-xs font-bold tracking-widest text-[#FFFFFF] border border-transparent uppercase bg-[#C037FF] shadow-lg">
+                                <span class="w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
+                                Novità: CCNL
+                            </span>
+                            </div>
+                            <h2 class="reveal text-4xl md:text-5xl text-white tracking-tight mb-8" style="color: white">
+                            Il valore dell'AI<br /> al servizio dell'intelligenza umana.
+                            </h2>
+                            <p class="reveal text-xl md:text-2xl font-medium text-white/80" style="color: #E2E8F0">
+                            Le soluzioni integrate Eutekne, potenziate con l'AI applicata al Sistema Integrato Lavoro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 relative z-20 stagger-container">
+                        <div class="reveal lg:col-span-4 p-8 rounded-[12px] bg-[#092B48] backdrop-blur-md border border-[#164972] shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                            <h3 class="tracking-tight mb-4 text-2xl font-bold drop-shadow-sm" style="color: #ffffff">Risposte integrate con normativa e CCNL</h3>
+                            <p class="text-lg font-medium" style="color: #ffffff">
+                            Eutekne AI considera non solo la disciplina normativa generale ma anche la contrattazione collettiva concretamente applicata.
+                            </p>
+                        </div>
+                        <div class="reveal lg:col-span-4 p-8 rounded-[12px] bg-[#092B48] backdrop-blur-md border border-[#164972] shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                            <h3 class="tracking-tight mb-4 text-2xl font-bold drop-shadow-sm" style="color: #ffffff">Comparazione e inquadramenti</h3>
+                            <p class="text-lg font-medium" style="color: #ffffff">
+                            Compara le discipline di CCNL diversi, individua inquadramenti per specifiche mansioni, trattamenti economici e previdenziali.
+                            </p>
+                        </div>
+                        <div class="reveal lg:col-span-4 p-8 rounded-[12px] bg-[#092B48] backdrop-blur-md border border-[#164972] shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                            <h3 class="tracking-tight mb-4 text-2xl font-bold drop-shadow-sm" style="color: #ffffff">Regole operative e Fac-simile</h3>
+                            <p class="text-lg font-medium" style="color: #ffffff">
+                            Accedi alle regole operative per la gestione del rapporto e genera fac-simile personalizzati per contratti, lettere e comunicazioni.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- SECTION 6: CORE VALUE PROPOSITION -->
+                <section class="py-16 lg:py-24 bg-bg-light">
+                <div class="container-boxed">
+                    <div class="mb-12 text-center reveal">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl text-brand-secondary tracking-tight mb-6 leading-tight">I vantaggi di un ecosistema integrato</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
+                        <!-- Card 1 -->
+                        <div class="reveal bg-white rounded-xl p-8 shadow-md flex flex-col hover:shadow-lg transition-shadow">
+                            <div class="h-14 w-14 bg-bg-light border border-border text-[var(--color-brand-primary)] rounded-[12px] flex items-center justify-center mb-6 shadow-sm">
+                            <i data-lucide="layers" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary mb-3 tracking-tight">Zero frammentazione,<br/>massimo ordine.</h3>
+                            <p class="text-text-secondary font-medium leading-relaxed">
+                            Abbandona la logica dei software disconnessi. Informazione quotidiana, strumenti di calcolo, aggiornamento e supporto convivono in un unico ambiente operativo, facendoti risparmiare ore di ricerca.
+                            </p>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="reveal bg-white rounded-xl p-8 shadow-md flex flex-col hover:shadow-lg transition-shadow">
+                            <div class="h-14 w-14 bg-bg-light border border-border text-[var(--color-brand-primary)] rounded-[12px] flex items-center justify-center mb-6 shadow-sm">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary mb-3 tracking-tight">La tranquillità<br/>del rigore scientifico.</h3>
+                            <p class="text-text-secondary font-medium leading-relaxed">
+                            Dietro ogni tool e ogni articolo c'è la validazione del Centro Studi Eutekne. Riduci i margini di incertezza e affronta le casistiche più complesse con la certezza di basi verificate.
+                            </p>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="reveal bg-white rounded-xl p-8 shadow-md flex flex-col hover:shadow-lg transition-shadow">
+                            <div class="h-14 w-14 bg-bg-light border border-border text-[var(--color-brand-primary)] rounded-[12px] flex items-center justify-center mb-6 shadow-sm">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary mb-3 tracking-tight">Il motore per tutto<br/>il tuo Studio.</h3>
+                            <p class="text-text-secondary font-medium leading-relaxed">
+                            Un'infrastruttura progettata per la reale operatività. Dai percorsi di lettura per il professionista senior agli strumenti pratici per il personale amministrativo, rende più autonomo l'intero team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- SECTION 7: LEAD GEN FORM -->
+                <section id="contact-form" class="py-16 lg:py-24 bg-bg-muted relative">
+                <div class="container-boxed relative z-10 grid grid-cols-1 lg:grid-cols-12 lg:gap-x-8">
+                    <div class="col-span-1 lg:col-start-3 lg:col-span-8">
+                        <div class="text-center mb-12 stagger-container">
+                            <h2 class="reveal text-brand-secondary tracking-tight mb-6 text-4xl">
+                            Costruiamo insieme il tuo nuovo metodo di lavoro.
+                            </h2>
+                            <p class="reveal text-xl text-text-secondary font-medium">
+                            Compila il modulo. Un nostro specialista ti contatterà per mostrarti in anteprima l'ambiente Eutekne Lavoro.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-12 stagger-container">
+                            <form id="contact-form-el" class="space-y-6 reveal">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" name="nome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Nome*" />
+                                <input type="text" name="cognome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Cognome*" />
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" name="societa" class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Società" />
+                                <div class="relative">
+                                    <select name="professione" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm">
+                                    <option value="" disabled selected class="text-gray-400">Professione*</option>
+                                    <option value="Consulente del Lavoro">Consulente del Lavoro</option>
+                                    <option value="Commercialista">Commercialista</option>
+                                    <option value="Esperto Contabile">Esperto Contabile</option>
+                                    <option value="Azienda / HR">Azienda / HR</option>
+                                    <option value="Altro">Altro</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#0A3D5B]">
+                                    <svg class="fill-current h-4 w-4 font-bold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" name="citta" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Città*" />
+                                <input type="text" name="provincia" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Provincia*" />
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
+                                <input type="text" name="indirizzo" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Indirizzo" />
+                                <input type="text" name="cap" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="CAP" />
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" name="telefono" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Telefono*" />
+                                <input type="email" name="email" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Email*" />
+                                </div>
+                                <div class="pt-6 pb-2 flex items-start">
+                                <div class="flex items-center h-5 mt-0.5">
+                                    <input id="privacy" name="privacy" type="checkbox" required class="w-4 h-4 border-gray-300 rounded text-[var(--color-brand-primary)] focus:ring-[var(--color-brand-primary)]" />
+                                </div>
+                                <label for="privacy" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                                    Ho letto e accettato le <a href="#" class="font-semibold border-b border-gray-400 text-gray-800 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] transition-colors">condizioni sulla privacy</a> e sull'utilizzo dei <a href="#" class="font-semibold border-b border-gray-400 text-gray-800 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] transition-colors">cookie</a>
+                                </label>
+                                </div>
+                                <div class="pt-4 flex justify-center">
+                                <button type="submit" class="btn-primary !bg-[var(--color-brand-primary)] hover:!bg-[#008ba0] !text-white text-[15px] px-12 py-3.5 border-none inline-flex rounded-full shadow-lg hover:shadow-xl font-bold tracking-widest uppercase items-center justify-center transform active:scale-95 transition-all">
+                                    INVIA
+                                </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- SECTION EVENT BANNER -->
+                <section id="festival-del-lavoro" class="relative py-24 overflow-hidden bg-[#011423] scroll-mt-[176px]">
+                <div class="absolute inset-0 z-0">
+                    <img src="/assets/banner_FDL.jpg" alt="Festival del Lavoro Background" class="w-full h-full object-cover object-center md:object-[center_20%]" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#011423]/95 via-[#011423]/70 to-[#011423]/10"></div>
+                </div>
+                
+                <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 relative z-10">
+                    <div class="col-span-1 lg:col-span-7 pt-10 stagger-container">
+                        <img src="/assets/logoFDL.png" alt="Festival del Lavoro Logo" class="reveal h-20 sm:h-24 mb-8 object-contain" />
+                        <div class="reveal text-white flex flex-col gap-1 sm:gap-2" style="color: white">
+                            <span class="text-2xl sm:text-3xl font-medium">
+                            Vi aspettiamo a <span class="font-bold">Roma</span>
+                            </span>
+                            <span class="text-5xl sm:text-[64px] font-black text-[var(--color-brand-accent)] tracking-tighter leading-none">
+                            dal 21 al 23 maggio
+                            </span>
+                            <div class="mt-8 flex flex-col items-start w-full">
+                                <div class="w-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm rounded-[16px] p-6 sm:p-8 border border-white/20 shadow-lg relative overflow-hidden group">
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-700 group-hover:bg-[var(--color-brand-accent)]/30"></div>
+                                    <div class="relative z-10 flex flex-col gap-4 sm:gap-5">
+                                        <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
+                                        Vieni allo <span class="text-white" style="color: #ffffff">Stand Eutekne n.7</span> per ricevere il tuo volume omaggio
+                                        </p>
+                                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+                                            <div class="hidden sm:flex h-10 w-10 shrink-0 bg-[var(--color-brand-accent)] rounded-xl items-center justify-center text-[#011423] shadow-md transition-transform duration-300">
+                                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="text-xl sm:text-2xl font-black text-white !mb-0 leading-none" style="color: #ffffff">
+                                                I LICENZIAMENTI INDIVIDUALI
+                                                </h4>
+                                                <p class="text-white/80 text-base sm:text-lg font-medium italic mt-2" style="color: rgba(255, 255, 255, 0.8)">
+                                                Una lettura integrata tra tutela giuridica e gestione amministrativa
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="bg-[#011423] py-10 border-t border-[#041D30]" style="color: #E2E8F0">
+                <div class="container-boxed flex flex-col items-center text-center text-sm font-medium gap-6">
+                    <a href="#" aria-label="Eutekne Lavoro Home" class="inline-block">
+                        <img src="/assets/EutLav-logo.svg" alt="Eutekne Lavoro" class="h-8 opacity-60 brightness-0 invert mb-2" />
+                    </a>
+                    <div class="flex flex-col gap-2 opacity-70 items-center leading-relaxed">
+                        <div>
+                            2026 &copy; EUTEKNE SpA | <a href="#" class="hover:text-white transition-colors">Privacy</a> | <a href="#" class="hover:text-white transition-colors">Cookie</a>
+                        </div>
+                        <div>
+                            Via San Pio V, 27 - 10125 TORINO - Tel. 011.562.89.70 - Fax 011.562.76.04 - <a href="mailto:info@eutekne.it" class="hover:text-white transition-colors">info@eutekne.it</a>
+                        </div>
+                        <div>
+                            Capitale Sociale &euro; 540.000,00 i.v. C.F. P.IVA Iscrizione Registro Imprese di Torino 05546030015
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- CARD MODAL OVERLAY -->
+    <div id="card-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 md:p-12">
+        <!-- Backdrop -->
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative bg-[#f5f5f7] rounded-[32px] shadow-2xl w-full max-w-5xl h-[90vh] overflow-y-auto hide-scrollbar z-10">
+            <!-- Close Button -->
+            <div class="sticky top-0 right-0 w-full flex justify-end p-6 z-20 pointer-events-none">
+                <button id="modal-close" class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center text-[#1d1d1f] transition-colors pointer-events-auto backdrop-blur-md cursor-pointer">
+                    <i data-lucide="x" class="h-5 w-5"></i>
+                </button>
+            </div>
+            <div class="px-8 md:px-16 lg:px-24 pb-24 mt-[-64px]">
+                <div id="modal-icon-box" class="mb-4 opacity-80 pt-16">
+                    <!-- Icon placeholder -->
+                </div>
+                
+                <h2 id="modal-title" class="text-[#1d1d1f] text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight mb-8 leading-tight max-w-3xl"></h2>
+
+                <!-- Description section -->
+                <p id="modal-text" class="text-[22px] text-[#1d1d1f] font-medium leading-relaxed max-w-3xl mb-16"></p>
+
+                <!-- Lower text section -->
+                <div class="max-w-3xl">
+                    <h3 class="text-2xl font-bold text-[#1d1d1f] mb-4">Pensato per i professionisti.</h3>
+                    <p class="text-xl text-[#86868b] font-medium leading-relaxed mb-6">
+                        Le soluzioni Eutekne Lavoro sono progettate intorno alle tue esigenze. Analizziamo le abitudini degli studi professionali per offrirti interfacce intuitive e flussi di lavoro ottimizzati dalla nostra esperienza.
+                    </p>
+                    <p class="text-xl text-[#86868b] font-medium leading-relaxed">
+                        L'integrazione di intelligenza artificiale, unita alla nostra profonda competenza nel settore, crea un ambiente di lavoro senza eguali.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
