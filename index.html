@@ -804,13 +804,13 @@
                         <div class="mt-12 stagger-container">
                             <form id="contact-form-el" class="space-y-6 reveal">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="nome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Nome*" />
-                                <input type="text" name="cognome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Cognome*" />
+                                <input type="text" name="nome" aria-label="Nome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Nome*" />
+                                <input type="text" name="cognome" aria-label="Cognome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Cognome*" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="societa" class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Società" />
+                                <input type="text" name="societa" aria-label="Società" class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Società" />
                                 <div class="relative">
-                                    <select name="professione" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm">
+                                    <select name="professione" aria-label="Professione" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm">
                                     <option value="" disabled selected class="text-gray-400">Professione*</option>
                                     <option value="Consulente del Lavoro">Consulente del Lavoro</option>
                                     <option value="Commercialista">Commercialista</option>
@@ -824,16 +824,16 @@
                                 </div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="citta" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Città*" />
-                                <input type="text" name="provincia" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Provincia*" />
+                                <input type="text" name="citta" aria-label="Città" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Città*" />
+                                <input type="text" name="provincia" aria-label="Provincia" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Provincia*" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
-                                <input type="text" name="indirizzo" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Indirizzo" />
-                                <input type="text" name="cap" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="CAP" />
+                                <input type="text" name="indirizzo" aria-label="Indirizzo" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Indirizzo" />
+                                <input type="text" name="cap" aria-label="CAP" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="CAP" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="telefono" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Telefono*" />
-                                <input type="email" name="email" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Email*" />
+                                <input type="text" name="telefono" aria-label="Telefono" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Telefono*" />
+                                <input type="email" name="email" aria-label="Email" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Email*" />
                                 </div>
                                 <div class="pt-6 pb-2 flex items-start">
                                 <div class="flex items-center h-5 mt-0.5">
@@ -862,8 +862,13 @@
                 </div>
                 
                 <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 relative z-10">
-                    <div class="col-span-1 lg:col-span-7 pt-10 stagger-container">
-                        <img src="/assets/logoFDL.png" alt="Festival del Lavoro Logo" class="reveal h-20 sm:h-24 mb-8 object-contain" />
+                    <div class="col-span-1 lg:col-span-9 pt-10 stagger-container">
+                        <div class="reveal flex items-center gap-6 mb-8">
+                            <img src="/assets/logoFDL.png" alt="Festival del Lavoro Logo" class="h-20 sm:h-24 object-contain" />
+                            <span class="inline-flex items-center justify-center px-5 py-2.5 bg-[var(--color-brand-primary)] text-white text-lg sm:text-xl font-bold tracking-wide rounded-xl shadow-lg border border-white/10 uppercase">
+                                Stand n. 7
+                            </span>
+                        </div>
                         <div class="reveal text-white flex flex-col gap-1 sm:gap-2" style="color: white">
                             <span class="text-2xl sm:text-3xl font-medium">
                             Ti aspettiamo a <span class="font-bold">Roma</span>
@@ -871,24 +876,49 @@
                             <span class="text-5xl sm:text-[64px] font-black text-[var(--color-brand-accent)] tracking-tighter leading-none">
                             dal 21 al 23 maggio
                             </span>
-                            <div class="mt-8 flex flex-col items-start w-full">
+                            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                                 <div class="w-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm rounded-[16px] p-6 sm:p-8 border border-white/20 shadow-lg relative overflow-hidden group">
                                     <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-700 group-hover:bg-[var(--color-brand-accent)]/30"></div>
-                                    <div class="relative z-10 flex flex-col gap-4 sm:gap-5">
-                                        <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
-                                        Vieni allo <span class="text-white" style="color: #ffffff">Stand Eutekne n.7</span><br>per ritirare la tua copia omaggio del volume.
-                                        </p>
-                                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
-                                            <div class="hidden sm:flex h-10 w-10 shrink-0 bg-[var(--color-brand-accent)] rounded-xl items-center justify-center text-[#011423] shadow-md transition-transform duration-300">
-                                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                                    <div class="relative z-10 flex flex-col gap-4 sm:gap-5 h-full">
+                                        <div class="flex items-center gap-4 sm:gap-5">
+                                            <div class="flex h-10 w-10 shrink-0 bg-[var(--color-brand-accent)] rounded-xl items-center justify-center text-[#011423] shadow-md transition-transform duration-300">
+                                                <i data-lucide="gift" class="w-5 h-5"></i>
                                             </div>
-                                            <div class="flex-1">
-                                                <h4 class="text-xl sm:text-2xl font-black text-white !mb-0 leading-none" style="color: #ffffff">
-                                                I LICENZIAMENTI INDIVIDUALI
-                                                </h4>
-                                                <p class="text-white/80 text-base sm:text-lg font-medium italic mt-2" style="color: rgba(255, 255, 255, 0.8)">
-                                                Una lettura integrata tra tutela giuridica e gestione amministrativa
-                                                </p>
+                                            <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
+                                                Vieni a ritirare la tua copia <span class="text-white" style="color: #ffffff">omaggio</span> del volume:
+                                            </p>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-start mt-6">
+                                            <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-2" style="color: #ffffff">
+                                            I Licenziamenti individuali
+                                            </h4>
+                                            <p class="text-white/80 text-base sm:text-lg font-medium italic" style="color: rgba(255, 255, 255, 0.8)">
+                                            Una lettura integrata tra tutela giuridica e gestione amministrativa
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="w-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm rounded-[16px] p-6 sm:p-8 border border-white/20 shadow-lg relative overflow-hidden group">
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-700 group-hover:bg-[var(--color-brand-accent)]/30"></div>
+                                    <div class="relative z-10 flex flex-col gap-4 sm:gap-5 h-full">
+                                        <div class="flex items-center gap-4 sm:gap-5">
+                                            <div class="flex h-10 w-10 shrink-0 bg-[var(--color-brand-accent)] rounded-xl items-center justify-center text-[#011423] shadow-md transition-transform duration-300">
+                                                <i data-lucide="mic" class="w-5 h-5"></i>
+                                            </div>
+                                            <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
+                                                Partecipa ai nostri incontri durante il festival:
+                                            </p>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-start mt-6">
+                                            <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-2" style="color: #ffffff">
+                                                Lettura integrata tra tutela giuridica e gestione amministrativa
+                                            </h4>
+                                            <p class="text-white/80 text-sm font-medium mb-4" style="color: rgba(255, 255, 255, 0.8)">
+                                                con Gabriele Massimiliani, Giovanna Giorno.
+                                            </p>
+                                            <div class="flex items-center text-white/90 text-sm font-semibold tracking-wide" style="color: rgba(255, 255, 255, 0.9)">
+                                                Aula 110 &bull; Venerdì 21 alle ore 10.30
                                             </div>
                                         </div>
                                     </div>
