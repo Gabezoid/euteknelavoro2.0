@@ -13,7 +13,7 @@
         <div className="flex flex-col bg-[var(--color-bg-light)]">
             
             <!-- ANNOUNCEMENT BANNER -->
-            <a href="#festival-del-lavoro" class="fixed top-0 left-0 right-0 z-[60] h-10 bg-[var(--color-brand-secondary)] text-[var(--color-brand-accent)] flex items-center overflow-hidden hover:bg-[#042A46] transition-colors cursor-pointer" aria-label="Informazioni Festival del Lavoro 2026">
+            <a id="btn-festival-lavoro-header" href="#festival-del-lavoro" class="fixed top-0 left-0 right-0 z-[60] h-10 bg-[var(--color-brand-secondary)] text-[var(--color-brand-accent)] flex items-center overflow-hidden hover:bg-[#042A46] transition-colors cursor-pointer" aria-label="Informazioni Festival del Lavoro 2026">
                 <div class="animate-[marquee_25s_linear_infinite] inline-block whitespace-nowrap text-sm font-bold uppercase tracking-widest flex items-center" style="animation: marquee 25s linear infinite;">
                     <style>@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }</style>
                     <span class="px-8">Ti aspettiamo al Festival del Lavoro 2026 a Roma dal 21 al 23 maggio presso lo stand 7</span>
@@ -36,7 +36,7 @@
                     </a>
                     </div>
                     <div class="flex items-center">
-                    <a href="#contact-form" class="btn-primary !bg-[var(--color-brand-secondary)] !text-white hover:!bg-[var(--color-brand-accent)] border-none md:!py-2.5 md:!px-6 w-10 h-10 md:w-auto md:h-auto !p-0 text-sm flex items-center justify-center rounded-md">
+                    <a id="btn-contattaci-header" href="#contact-form" class="btn-primary !bg-[var(--color-brand-secondary)] !text-white hover:!bg-[var(--color-brand-accent)] border-none md:!py-2.5 md:!px-6 w-10 h-10 md:w-auto md:h-auto !p-0 text-sm flex items-center justify-center rounded-md">
                         <i data-lucide="mail" class="w-5 h-5 md:hidden"></i>
                         <span class="hidden md:inline">Contattaci senza impegno</span>
                     </a>
@@ -81,7 +81,7 @@
                             <span class="block text-white/90 text-[17px] md:text-lg mb-8 font-medium leading-relaxed max-w-[465px]">
                                 Soluzioni integrate per l'amministrazione del personale e la consulenza del lavoro. Informazione, professione, formazione e supporto in un solo ambiente per lavorare con più ordine e in totale sicurezza.<br />Con le potenzialità di <a href="#eutekne-ai" class="text-[var(--color-brand-accent)] hover:underline font-bold">Eutekne AI</a>
                             </span>
-                            <a href="#contact-form" class="btn-primary !bg-[var(--color-brand-accent)] hover:!bg-[var(--color-brand-accent-hover)] !text-[var(--color-brand-secondary)] text-lg px-8 py-4 border-none inline-flex">
+                            <a id="btn-scopri-migliorare" href="#contact-form" class="btn-primary !bg-[var(--color-brand-accent)] hover:!bg-[var(--color-brand-accent-hover)] !text-[var(--color-brand-secondary)] text-lg px-8 py-4 border-none inline-flex">
                                 Scopri come migliorare il tuo lavoro
                             </a>
                         </div>
@@ -94,23 +94,23 @@
                     <div class="container-boxed flex items-center justify-between">
                         <div class="flex justify-between w-full" style="padding-top: 16px; padding-bottom: 16px;">
                             <div class="flex items-center space-x-1 md:space-x-2 overflow-x-auto whitespace-nowrap hide-scrollbar flex-1 relative w-full justify-center md:justify-start">
-                                <a href="#informazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                <a id="tab-informazione" href="#informazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
                                     <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
                                     <span class="relative z-10 flex items-center gap-1.5">Informazione</span>
                                 </a>
-                                <a href="#professione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                <a id="tab-professione" href="#professione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
                                     <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
                                     <span class="relative z-10 flex items-center gap-1.5">Professione</span>
                                 </a>
-                                <a href="#formazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                <a id="tab-formazione" href="#formazione" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
                                     <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
                                     <span class="relative z-10 flex items-center gap-1.5">Formazione</span>
                                 </a>
-                                <a href="#supporto" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                <a id="tab-supporto" href="#supporto" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
                                     <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
                                     <span class="relative z-10 flex items-center gap-1.5">Supporto</span>
                                 </a>
-                                <a href="#eutekne-ai" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
+                                <a id="tab-eutekne-ai" href="#eutekne-ai" class="nav-link relative px-4 py-2 flex items-center gap-1.5 font-bold uppercase tracking-wider text-sm transition-colors text-text-secondary hover:text-[var(--color-brand-primary)]">
                                     <div class="nav-indicator hidden absolute inset-0 bg-gray-100/80 rounded-full z-0 transition-opacity"></div>
                                     <span class="relative z-10 flex items-center gap-1.5">
                                         <img src="/assets/eai_glifo.svg" alt="" class="w-5 h-5 object-contain" />
