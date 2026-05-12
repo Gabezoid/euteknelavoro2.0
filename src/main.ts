@@ -207,6 +207,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 8. Horizontal Scroll Buttons
+    const updateScrollButtonsVisibility = () => {
+        const scrollContainers = new Set<string>();
+        document.querySelectorAll('[data-scroll-target]').forEach(btn => {
+            const targetId = btn.getAttribute('data-scroll-target');
+            if (targetId) scrollContainers.add(targetId);
+        });
+
+        scrollContainers.forEach(id => {
+            const container = document.getElementById(id);
+            if (!container) return;
+            
+            const buttons = document.querySelectorAll(`[data-scroll-target="${id}"]`);
+            if (buttons.length > 0) {
+                // Determine if the container needs scrolling
+                // Ignore the trailing spacer's width (and its gap) when calculating overflow
+                let extraWidth = 0;
+                const lastElement = container.lastElementChild as HTMLElement;
+                if (lastElement && lastElement.classList.contains('carousel-spacer')) {
+                    extraWidth = lastElement.offsetWidth + 24; // spacer width + gap
+                }
+                
+                // Add a small threshold (2px) to account for rounding errors
+                const isScrollable = (container.scrollWidth - extraWidth) > container.clientWidth + 2;
+                
+                const wrapper = buttons[0].parentElement;
+                if (wrapper) {
+                    if (isScrollable) {
+                        wrapper.style.display = '';
+                    } else {
+                        wrapper.style.display = 'none';
+                    }
+                }
+            }
+        });
+    };
+
+    // Call initially and on resize
+    updateScrollButtonsVisibility();
+    window.addEventListener('resize', updateScrollButtonsVisibility);
+
     document.querySelectorAll('[data-scroll-target]').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
