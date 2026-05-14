@@ -7,8 +7,29 @@
     <!-- Tailwind CSS included via module in main.ts importing index.css -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+
+            console.log(`[GTM] Inizializzazione script inserita (${i}) @ ${new Date().toISOString()}`);
+        })(window, document, 'script', 'dataLayer', 'GTM-NHQXRN8');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHQXRN8"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
     <div id="root">
         <div className="flex flex-col bg-[var(--color-bg-light)]">
             
@@ -55,11 +76,9 @@
                     
                     <!-- Woman Positioned -->
                     <div class="absolute bottom-0 h-[75%] md:h-[85%] left-1/2 -translate-x-1/2 z-10 pointer-events-none flex flex-col items-center justify-end">
-                    <video autoPlay muted playsInline class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl">
-                        <source src="/assets/woman.mov" type="video/mp4" />
-                        <source src="/assets/woman.mov" type="video/quicktime" />
-                        <img src="/assets/woman.png" alt="Consulente Eutekne" class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl" />
-                    </video>
+                        <video id="main-video" class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl" autoPlay muted>
+                            <img id="main-image" src="assets/woman.png" alt="Consulente Eutekne" class="h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl" />
+                        </video>
                     </div>
                 </div>
 
@@ -801,13 +820,13 @@
                         </div>
                         
                         <div class="mt-12 stagger-container">
-                            <form id="contact-form-el" class="space-y-6 reveal">
+                            <form id="contact-form-el" class="richiediinfo space-y-6 reveal">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="nome" aria-label="Nome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Nome*" />
-                                <input type="text" name="cognome" aria-label="Cognome" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Cognome*" />
+                                <input type="text" name="nome" aria-label="Nome" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Nome*" />
+                                <input type="text" name="cognome" aria-label="Cognome" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Cognome*" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="societa" aria-label="Società" class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Società" />
+                                <input type="text" name="societa" aria-label="Società" class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Società" />
                                 <div class="relative">
                                     <select name="professione" aria-label="Professione" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 appearance-none focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm">
                                     <option value="" disabled selected class="text-gray-400">Professione*</option>
@@ -823,27 +842,27 @@
                                 </div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="citta" aria-label="Città" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Città*" />
-                                <input type="text" name="provincia" aria-label="Provincia" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Provincia*" />
+                                <input type="text" name="citta" aria-label="Città" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Città*" />
+                                <input type="text" name="provincia" aria-label="Provincia" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Provincia*" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
-                                <input type="text" name="indirizzo" aria-label="Indirizzo" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Indirizzo" />
-                                <input type="text" name="cap" aria-label="CAP" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="CAP" />
+                                <input type="text" name="indirizzo" aria-label="Indirizzo" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Indirizzo" />
+                                <input type="text" name="cap" aria-label="CAP" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="CAP" />
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" name="telefono" aria-label="Telefono" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Telefono*" />
-                                <input type="email" name="email" aria-label="Email" required class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Email*" />
+                                <input type="text" name="telefono" aria-label="Telefono" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Telefono*" />
+                                <input type="email" name="email" aria-label="Email" required class="richiediinfo-param w-full px-5 py-4 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)] focus:border-transparent transition-all shadow-sm" placeholder="Email*" />
                                 </div>
                                 <div class="pt-6 pb-2 flex items-start">
                                 <div class="flex items-center h-5 mt-0.5">
-                                    <input id="privacy" name="privacy" type="checkbox" required class="w-4 h-4 border-gray-300 rounded text-[var(--color-brand-primary)] focus:ring-[var(--color-brand-primary)]" />
+                                    <input id="privacy" name="privacy" type="checkbox" required class="privacy-check w-4 h-4 border-gray-300 rounded text-[var(--color-brand-primary)] focus:ring-[var(--color-brand-primary)]" />
                                 </div>
                                 <label for="privacy" class="ml-3 text-sm text-gray-600 cursor-pointer">
                                     Ho letto e accettato le <a href="#" class="font-semibold border-b border-gray-400 text-gray-800 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] transition-colors">condizioni sulla privacy</a> e sull'utilizzo dei <a href="#" class="font-semibold border-b border-gray-400 text-gray-800 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] transition-colors">cookie</a>
                                 </label>
                                 </div>
                                 <div class="pt-4 flex justify-center">
-                                <button type="submit" class="btn-primary !bg-[var(--color-brand-primary)] hover:!bg-[#008ba0] !text-white text-[15px] px-12 py-3.5 border-none inline-flex rounded-full shadow-lg hover:shadow-xl font-bold tracking-widest uppercase items-center justify-center transform active:scale-95 transition-all">
+                                <button type="submit" class="richiediinfo_btninvia btn-primary !bg-[var(--color-brand-primary)] hover:!bg-[#008ba0] !text-white text-[15px] px-12 py-3.5 border-none inline-flex rounded-full shadow-lg hover:shadow-xl font-bold tracking-widest uppercase items-center justify-center transform active:scale-95 transition-all">
                                     INVIA
                                 </button>
                                 </div>
@@ -861,7 +880,7 @@
                 </div>
                 
                 <div class="container-boxed grid grid-cols-1 lg:grid-cols-12 relative z-10">
-                    <div class="col-span-1 lg:col-span-9 pt-10 stagger-container">
+                    <div class="col-span-1 lg:col-span-12 pt-10 stagger-container">
                         <div class="reveal flex items-center gap-6 mb-8">
                             <img src="/assets/logoFDL.png" alt="Festival del Lavoro Logo" class="h-20 sm:h-24 object-contain" />
                             <span class="inline-flex items-center justify-center px-5 py-2.5 bg-[var(--color-brand-primary)] text-white text-lg sm:text-xl font-bold tracking-wide rounded-xl shadow-lg border border-white/10 uppercase">
@@ -875,7 +894,7 @@
                             <span class="text-5xl sm:text-[64px] font-black text-[var(--color-brand-accent)] tracking-tighter leading-none">
                             dal 21 al 23 maggio
                             </span>
-                            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                                 <div class="w-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm rounded-[16px] p-6 sm:p-8 border border-white/20 shadow-lg relative overflow-hidden group">
                                     <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-700 group-hover:bg-[var(--color-brand-accent)]/30"></div>
                                     <div class="relative z-10 flex flex-col gap-4 sm:gap-5 h-full">
@@ -884,12 +903,12 @@
                                                 <i data-lucide="gift" class="w-5 h-5"></i>
                                             </div>
                                             <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
-                                                Vieni a ritirare la tua copia <span class="text-white" style="color: #ffffff">omaggio</span> del volume:
+                                                Vieni a ritirare la tua copia <span class="text-white" style="color: #ffffff">omaggio</span> del volume
                                             </p>
                                         </div>
                                         <div class="flex-1 flex flex-col justify-start mt-6">
                                             <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-2" style="color: #ffffff">
-                                            I Licenziamenti individuali
+                                            "I Licenziamenti individuali"
                                             </h4>
                                             <p class="text-white/80 text-base sm:text-lg font-medium italic" style="color: rgba(255, 255, 255, 0.8)">
                                             Una lettura integrata tra tutela giuridica e gestione amministrativa
@@ -906,19 +925,51 @@
                                                 <i data-lucide="mic" class="w-5 h-5"></i>
                                             </div>
                                             <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
-                                                Partecipa ai nostri incontri durante il festival:
+                                                Partecipa ai nostri incontri
                                             </p>
                                         </div>
                                         <div class="flex-1 flex flex-col justify-start mt-6">
-                                            <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-2" style="color: #ffffff">
-                                                Lettura integrata tra tutela giuridica e gestione amministrativa
-                                            </h4>
-                                            <p class="text-white/80 text-sm font-medium mb-4" style="color: rgba(255, 255, 255, 0.8)">
-                                                con Gabriele Massimiliani, Giovanna Giorno.
-                                            </p>
-                                            <div class="flex items-center text-white/90 text-sm font-semibold tracking-wide" style="color: rgba(255, 255, 255, 0.9)">
-                                                Aula 110 &bull; Venerdì 21 alle ore 10.30
+                                            <div class="flex items-center text-[var(--color-brand-accent)] text-xs md:text-sm font-bold tracking-wide uppercase mb-2">
+                                                Venerdì 22, Aula 3 &bull; h. 10 - 10:50
                                             </div>
+                                            <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-0" style="color: #ffffff">
+                                                Licenziamenti individuali
+                                            </h4>
+                                            <p class="text-white/80 text-base sm:text-lg font-medium italic -mt-1 mb-3" style="color: rgba(255, 255, 255, 0.8); line-height: 1.2;">
+                                                Gestione consapevole dei rischi e dei costi connessi alla cessazione del rapporto.
+                                            </p>
+                                            <p class="text-white/80 text-sm font-medium mb-4" style="color: rgba(255, 255, 255, 0.8)">
+                                                <strong>Modera:</strong> Simone Cagliano (Presidente CPO CDL Biella)<br>
+                                                <strong>Intervengono:</strong> Paolo Bonini (Consulente del Lavoro); Angela Fusco (Consulente del Lavoro); Giuseppe Gentile (Avvocato); Luca Negrini (Avvocato).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="w-full bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm rounded-[16px] p-6 sm:p-8 border border-white/20 shadow-lg relative overflow-hidden group">
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-accent)]/20 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-700 group-hover:bg-[var(--color-brand-accent)]/30"></div>
+                                    <div class="relative z-10 flex flex-col gap-4 sm:gap-5 h-full">
+                                        <div class="flex items-center gap-4 sm:gap-5">
+                                            <div class="flex h-10 w-10 shrink-0 bg-[var(--color-brand-accent)] rounded-xl items-center justify-center text-[#011423] shadow-md transition-transform duration-300">
+                                                <i data-lucide="mic" class="w-5 h-5"></i>
+                                            </div>
+                                            <p class="text-sm sm:text-base font-bold uppercase tracking-wider text-[var(--color-brand-accent)] m-0">
+                                                Partecipa ai nostri incontri
+                                            </p>
+                                        </div>
+                                        <div class="flex-1 flex flex-col justify-start mt-6">
+                                            <div class="flex items-center text-[var(--color-brand-accent)] text-xs md:text-sm font-bold tracking-wide uppercase mb-2">
+                                                Venerdì 22, Aula 3 &bull; h. 17 - 17:50
+                                            </div>
+                                            <h4 class="text-xl sm:text-2xl font-black text-white leading-tight mb-0" style="color: #ffffff">
+                                                Dove, come e quando l’AI può essere un alleato del Professionista
+                                            </h4>
+                                            <p class="text-white/80 text-base sm:text-lg font-medium italic -mt-1 mb-3" style="color: rgba(255, 255, 255, 0.8); line-height: 1.2;">
+                                                Vantaggi e benefici dell’AI Eutekne per l’attività quotidiana di studio
+                                            </p>
+                                            <p class="text-white/80 text-sm font-medium mb-4" style="color: rgba(255, 255, 255, 0.8)">
+                                                <strong>Relatori:</strong> Luca Piovano (Professionista esperto di AI); Fabrizio Bontempo (Presidente CPO CDL Torino); Alessandro Mori (Responsabile Area Lavoro Eutekne)
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -987,5 +1038,63 @@
             </div>
         </div>
     </div>
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/cookie-policy.js"></script>
+
+    <script type="text/javascript">
+        function getTransparentVideoSource(filename, basePath = "assets/") {
+            const ua = navigator.userAgent;
+            const minWidth = 1024;
+
+            const isFirefox = /Firefox/i.test(ua);
+            const isEdge = /Edg/i.test(ua);
+            const isChrome = /Chrome/i.test(ua) && !isEdge;
+            const isSafari =
+                /Safari/i.test(ua) &&
+                !isChrome &&
+                !isEdge &&
+                !isFirefox;
+
+            let extension = "webm";
+            let type = "video/webm";
+
+            // Safari gestisce meglio MOV/HEVC alpha
+            if (isSafari || isEdge) {
+                extension = "png";
+                type = "image/png";
+            }
+
+            return {
+                "src": `${basePath}${filename}.${extension}`,
+                "type": type,
+                "isFirefox": isFirefox,
+                "isChrome": isChrome,
+                "isSafari": isSafari,
+                "isEdge": isEdge,
+                "isMobile": window.innerWidth < minWidth || screen.width < minWidth
+            };
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoContent = document.getElementById("video-content");
+            const video = document.getElementById("main-video");
+            const source = document.createElement("source");
+
+            videoData = getTransparentVideoSource("woman");
+
+            if(videoData.isMobile || videoData.isSafari || videoData.isEdge) {
+                const image = document.getElementById("main-image");
+                let x = video.removeChild(image)
+                videoContent.appendChild(x)
+                video.remove()
+            }else{
+                source.type = videoData.type;
+                source.src = videoData.src;
+                video.appendChild(source)
+            }
+        });
+    </script>
   </body>
 </html>
